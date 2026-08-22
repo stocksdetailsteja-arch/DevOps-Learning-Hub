@@ -1,0 +1,381 @@
+i# Day 02 - Jenkins Installation
+
+## Overview
+
+This module covers the complete installation and initial configuration of Jenkins on Linux and AWS EC2.
+
+The focus is on:
+
+- Java Installation
+
+- Jenkins Installation
+
+- Linux Service Management
+
+- Initial Jenkins Setup
+
+- Plugin Installation
+
+- Administrator User Creation
+
+- Security Basics
+
+- Backup Awareness
+
+- Production Readiness
+
+Your internal Jenkins workbook defines Day02 around Jenkins installation, Java, package management, service validation, initial administrator setup, and plugin configuration.
+
+## Learning Objectives
+
+By the end of this module, you should be able to:
+
+- Install Java for Jenkins
+
+- Install Jenkins on Ubuntu Linux
+
+- Start Jenkins service
+
+- Stop Jenkins service
+
+- Restart Jenkins service
+
+- Enable Jenkins after reboot
+
+- Access Jenkins UI
+
+- Retrieve the initial administrator password
+
+- Complete first-time Jenkins setup
+
+- Install recommended plugins
+
+- Create Jenkins administrator user
+
+- Verify Jenkins installation
+
+- Understand Jenkins home directory
+
+- Understand Jenkins service files
+
+- Apply basic Jenkins security practices
+
+## Topics Covered
+
+- Java Prerequisites
+
+- Jenkins Installation
+
+- Jenkins Package Repository
+
+- Jenkins Service
+
+- systemctl Commands
+
+- Initial Admin Password
+
+- Unlock Jenkins
+
+- Plugin Installation
+
+- Admin User Creation
+
+- Jenkins Home Directory
+
+- Jenkins Logs
+
+- Jenkins Port Configuration
+
+- Jenkins Security Basics
+
+## Why This Module Is Important
+
+Without proper installation:
+
+- Jenkins cannot start
+
+- Plugins may fail
+
+- Builds may fail
+
+- Agents cannot connect
+
+- Web UI remains inaccessible
+
+- Upgrades become difficult
+
+- Recovery becomes harder
+
+A strong installation foundation prevents many future CI/CD problems.
+
+## DevOps Relevance
+
+This installation will later support:
+
+- Freestyle Jobs
+
+- Jenkins Pipelines
+
+- GitHub Integration
+
+- Docker Builds
+
+- Maven Builds
+
+- CI/CD Automation
+
+- Deployment Pipelines
+
+- Jenkins Agents
+
+## Architecture After Installation
+
+Browser
+
+↓
+
+Jenkins UI
+
+↓
+
+Jenkins Controller
+
+↓
+
+Jobs
+
+↓
+
+Build Queue
+
+↓
+
+Executors
+
+↓
+
+Workspaces
+
+## Environment Requirements
+
+Recommended Minimum Lab Environment
+
+Linux Server
+
+Examples:
+
+- Ubuntu
+
+- Amazon Linux
+
+- RHEL
+
+- CentOS
+
+Java Required
+
+Jenkins requires a supported Java runtime.
+
+Verify already installed Java:
+
+java -version
+
+Recommended Utilities
+
+- Git
+
+- curl
+
+- wget
+
+- unzip
+
+- systemctl
+
+- sudo
+
+## Installation Outcome
+
+After successful installation you should be able to access:
+
+http://SERVER_IP:8080
+
+Example Flow
+
+Browser
+
+↓
+
+Jenkins Dashboard
+
+↓
+
+Manage Jenkins
+
+↓
+
+Create Job
+
+## Jenkins Home Directory
+
+Common Location:
+
+/var/lib/jenkins
+
+Contains:
+
+- Jobs
+
+- Plugins
+
+- Credentials Metadata
+
+- Configuration Files
+
+- Workspaces
+
+- Build History
+
+Important:
+
+Never delete Jenkins Home without a backup.
+
+## Security Considerations
+
+Before exposing Jenkins:
+
+- Change default administrator settings
+
+- Restrict port access
+
+- Configure authentication
+
+- Install only required plugins
+
+- Review user permissions
+
+- Protect credentials
+
+- Back up Jenkins configuration
+
+## AWS EC2 Deployment Notes
+
+If using Jenkins on EC2:
+
+Allow:
+
+Port 8080
+
+For Jenkins UI Access
+
+Allow:
+
+Port 22
+
+For SSH Access
+
+Restrict source IPs wherever possible.
+
+Avoid:
+
+0.0.0.0/0 access for administration in production.
+
+## Expected Outcome
+
+After completing Day02:
+
+✅ Java Installed
+
+✅ Jenkins Installed
+
+✅ Jenkins Service Running
+
+✅ Jenkins Unlocked
+
+✅ Plugins Installed
+
+✅ Administrator User Created
+
+✅ Jenkins Ready For Job Creation
+
+## Files In This Module
+
+- README.md
+
+- concepts.md
+
+- commands.md
+
+- practise_session.md
+
+- lab_notes.md
+
+- interview_questions.md
+
+- troubleshooting.md
+
+- summary.md
+
+- Day02_Jenkins_Installation_Lab_Screenshots/
+
+## Screenshot Folder
+
+Recommended Screenshots
+
+- 01_java_installation.png
+
+- 02_java_version.png
+
+- 03_jenkins_repository.png
+
+- 04_jenkins_installation.png
+
+- 05_jenkins_service_running.png
+
+- 06_initial_admin_password.png
+
+- 07_unlock_jenkins.png
+
+- 08_plugin_installation.png
+
+- 09_admin_user_creation.png
+
+- 10_jenkins_dashboard.png
+
+- 11_manage_jenkins.png
+
+- 12_system_information.png
+
+- 13_service_status.png
+
+- 14_browser_access.png
+
+- 15_day02_completion.png
+
+## Validation Checklist
+
+- Java Installed
+
+- Jenkins Installed
+
+- Jenkins Service Running
+
+- Jenkins Service Enabled
+
+- Port 8080 Accessible
+
+- Initial Password Retrieved
+
+- Jenkins Unlocked
+
+- Plugins Installed
+
+- Admin User Created
+
+- Dashboard Accessible
+
+## Next Topic
+
+Day03_Jenkins_Architecture
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
