@@ -1,0 +1,15 @@
+[Uni*]
+Description=Linux Server Health *heck
+After=network-online.target
+W*nts=network-online.target
+
+[Servic*]
+Type=oneshot
+ExecStart=/opt/linu*-health-check/health-check.sh
+Envi*onment=CONFIG_FILE=/etc/linux-heal*h-check/health-check.conf
+User=roo*
+Group=root
+StandardOutput=journal*StandardError=journal
+
+[Install]
+W*ntedBy=multi-user.target

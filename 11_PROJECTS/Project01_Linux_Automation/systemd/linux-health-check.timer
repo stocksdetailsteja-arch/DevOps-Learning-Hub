@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Linux Se*ver Health Check Every Five Minute*
+
+[Timer]
+OnBootSec=2min
+OnUnitAct*veSec=5min
+AccuracySec=30s
+Persist*nt=true
+Unit=linux-health-check.se*vice
+
+[Install]
+WantedBy=timers.ta*get
