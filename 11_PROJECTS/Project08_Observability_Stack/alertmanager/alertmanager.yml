@@ -1,0 +1,7 @@
+route:
+
+  receiver: email-alerts
+
+receivers:
+
+  - name: email-alerts

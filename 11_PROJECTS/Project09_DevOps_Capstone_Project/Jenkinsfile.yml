@@ -1,0 +1,64 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+
+            steps {
+
+                git 'https://github.com/company/devops-app.git'
+            }
+        }
+
+        stage('Build') {
+
+            steps {
+
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Unit Tests') {
+
+            steps {
+
+                sh 'mvn test'
+            }
+        }
+
+        stage('Docker Build') {
+
+            steps {
+
+                sh 'docker build -t devops-app:${BUILD_NUMBER} .'
+            }
+        }
+
+        stage('Docker Push') {
+
+            steps {
+
+                sh 'docker push devops-app:${BUILD_NUMBER}'
+            }
+        }
+
+        stage('Terraform') {
+
+            steps {
+
+                sh 'terraform init'
+                sh 'terraform plan'
+            }
+        }
+
+        stage('Deploy') {
+
+            steps {
+
+                sh 'kubectl apply -f kubernetes/'
+            }
+        }
+    }
+}

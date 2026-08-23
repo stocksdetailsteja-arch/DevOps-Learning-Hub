@@ -1,0 +1,10 @@
+---
+
+- name: Complete configuration
+  hosts: all
+  become: true
+
+  roles:
+    - common
+    - nginx
+    - application

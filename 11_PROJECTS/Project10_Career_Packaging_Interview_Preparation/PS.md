@@ -1,0 +1,21 @@
+Project10_Career_Packaging_Interview_Preparation
+├── README.md
+├── Resume.md
+├── LinkedIn_Optimization.md
+├── STAR_Stories.md
+├── HR_Interview_QA.md
+├── DevOps_Interview_QA.md
+├── AWS_Interview_QA.md
+├── Jenkins_Interview_QA.md
+├── Docker_Interview_QA.md
+├── Kubernetes_Interview_QA.md
+├── Terraform_Interview_QA.md
+├── Ansible_Interview_QA.md
+├── Monitoring_Interview_QA.md
+├── Mock_Interview_Guide.md
+├── Portfolio_Presentation.md
+├── Salary_Negotiation.md
+├── Career_Roadmap.md
+├── Advanced_Production_Scenarios.md
+├── Resume_Bullets.md
+├── Learning
