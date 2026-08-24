@@ -5,3 +5,10 @@
 *.tmp
 
 .DS_Store
+
+AWS_keys.md
+*.pem
+*.key
+.aws/
+credentials
+*ecret*
